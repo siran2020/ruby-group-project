@@ -1,19 +1,59 @@
-# To make your code easier to read, you may want to define your methods here
-# Then you can call them in the actual calculator
 
-
-
-# This prompt happens before we start the "until" loop - we only want to welcome the user once.
-puts "Welcome to the Ruby calculator. You can type 'exit' at any time to leave. \nWhat would you like to do do?"
-choice = gets.chomp
-# The calculator starts looping here.
-until choice == "exit"
-  # You'll want to code all your calculator's functionality inside of this until loop.
-  # Right now, since we haven't built it yet, we have an error message so that they aren't confused.
-  puts "Sorry, I haven't been programmed to do that yet."
-
-  # This last bit is how we check to see if your user would like to exit
-  # or if they'd like to do some other operation before shutting down the calculator
-  puts "What would you like to do next?"
-  choice = gets.chomp
+while 1 == 1 
+  puts "Welcome to the Ruby calculator. \nWhat would you like to do do? 
+  1) Multiplication
+  2) Division
+  3) Addition
+  4) Subtraction"
+  
+  choice = gets.chomp.to_i
+  
+  if choice == 1
+      puts "You chose multiplication. \nPlease insert a number."
+      number1 = gets.chomp.to_i
+        
+      puts "Please insert another number."
+      number2 = gets.chomp.to_i
+        
+      multiply = number1 * number2
+        
+      puts "Your answer is #{multiply}"
+        
+      elsif choice == 2
+      puts "You chose division. \nPlease insert the dividend"
+      dividend = gets.chomp.to_i
+        
+      puts "Please insert the divisor"
+      divisor = gets.chomp.to_i  
+        
+      divide = dividend / divisor
+        
+      puts "Your answer is #{divide}"
+        
+      elsif choice == 3
+      puts "You chose addition. \nWhat is your first number?"
+      number1 = gets.chomp.to_i
+      
+      puts "What is your second number?"
+      number2 = gets.chomp.to_i
+        
+      add = number1 + number2
+        
+      puts "Your answer is #{add}."
+        
+      elsif choice == 4
+      puts "You chose subtraction. \nWhat number do you want to subtract from?"
+      number1 = gets.chomp.to_i
+        
+      puts "What number are you subtracting it by?"
+      number2 = gets.chomp.to_i
+        
+      subtract = number1 - number2
+        
+      puts "Your answer is #{subtract}."
+    
+      
+      else 
+      puts "Please choose a number between 1 and 4"
+  end
 end
